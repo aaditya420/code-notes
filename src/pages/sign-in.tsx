@@ -19,7 +19,7 @@ export default function SignIn() {
       <p>👋 Hi, Sign in with method below!</p>
       <button
         onClick={() =>
-          signIn('github', {
+          signIn('google', {
             redirect: false,
             callbackUrl: '/dashboard',
           })
