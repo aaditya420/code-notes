@@ -24,17 +24,17 @@ export default function SignIn() {
             callbackUrl: '/dashboard',
           })
         }
-        className="flex gap-2 rounded-full bg-black px-10 py-3"
+        className="flex gap-2 rounded-full bg-white px-10 py-3 text-black"
       >
         <img
           loading="lazy"
           height="24"
           width="24"
-          alt="Sign in with Github"
+          alt="Sign in with Google"
           id="provider-logo-dark"
-          src="https://authjs.dev/img/providers/github-dark.svg"
+          src="https://authjs.dev/img/providers/google.svg"
         ></img>
-        Sign in with Github
+        Sign in with Google
       </button>
     </div>
   );

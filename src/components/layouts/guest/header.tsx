@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { signIn, useSession } from 'next-auth/react';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -39,12 +40,17 @@ export default function Header() {
           <nav className="flex md:grow">
             <ul className="flex grow flex-wrap items-center justify-end">
               <li>
-                <Link
-                  href="/sign-in"
+                <button
+                  onClick={() =>
+                    signIn('google', {
+                      redirect: false,
+                      callbackUrl: '/dashboard',
+                    })
+                  }
                   className="flex items-center px-5 py-3 font-medium text-gray-300 transition duration-150 ease-in-out hover:text-gray-50"
                 >
                   Sign in
-                </Link>
+                </button>
               </li>
             </ul>
           </nav>
